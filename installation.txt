@@ -1,0 +1,30 @@
+conda create --name sol_eth_env
+conda activate sol_eth_env
+conda install conda-forge::Web3
+
+
+curl -fsSL https://fnm.vercel.app/install | bash
+
+fnm use --install-if-missing 20
+
+npm install hardhat
+npm install Web3
+
+npx hardhat node
+
+npx hardhat init
+
+npm install -g solc
+
+npx solc --bin contract.sol
+
+npx solc --abi contract.sol
+
+
+node
+# Installations for performing testing on the ether smart contract
+npm install --save-dev hardhat
+npm install --save-dev @nomiclabs/hardhat-ethers ethers chai
+npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle chai
+npm install chai-as-promised
+npm install --save-dev ethereum-waffle
